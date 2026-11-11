@@ -774,3 +774,288 @@
     }
   }
 }
+
+/* ==========================================================
+   ADDITIONS — paste at the very BOTTOM of css/style.css
+   Part A: logo
+   Part B: About block (classes your portfolio.html already uses)
+   Part C: Tech page
+   ========================================================== */
+@layer components {
+
+  /* ---------- A. LOGO ---------- */
+  .logo-svg {
+    inline-size: 2.4rem;
+    block-size: 2.4rem;
+    flex-shrink: 0;
+    filter: drop-shadow(0 0 10px var(--glow));
+    transition: transform 0.3s, filter 0.3s;
+  }
+  .site-logo:hover .logo-svg {
+    transform: rotate(-6deg) scale(1.06);
+    filter: drop-shadow(0 0 16px var(--emerald));
+  }
+
+  /* ---------- B. ABOUT BLOCK ---------- */
+  .about-grid {
+    display: grid;
+    gap: clamp(2rem, 5vw, 4rem);
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
+    align-items: center;
+  }
+  .about-photo {
+    position: relative;
+    aspect-ratio: 4 / 5;
+    max-inline-size: 26rem;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    border-radius: calc(var(--radius) * 1.5);
+    background:
+      radial-gradient(20rem 14rem at 50% 0%, var(--glow), transparent 70%),
+      linear-gradient(160deg, var(--forest), var(--graphite));
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    text-align: center;
+  }
+  .about-photo img {
+    position: absolute;
+    inset: 0;
+    inline-size: 100%;
+    block-size: 100%;
+    object-fit: cover;
+  }
+  .about-text {
+    display: grid;
+    gap: var(--space-m);
+    justify-items: start;
+  }
+
+  /* ---------- C. TECH PAGE ---------- */
+  .price {
+    font-family: var(--font-head);
+    font-size: clamp(1.5rem, 4vw, 1.9rem);
+    font-weight: 700;
+    color: var(--mint);
+    line-height: 1.2;
+  }
+  .price small {
+    display: block;
+    margin-block-start: 0.25rem;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+  .feature-list {
+    display: grid;
+    gap: 0.5rem;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+  }
+  .feature-list li {
+    display: flex;
+    gap: 0.6rem;
+  }
+  .feature-list li::before {
+    content: "✓";
+    color: var(--emerald);
+    font-weight: 700;
+  }
+
+  .steps {
+    display: grid;
+    gap: var(--space-m);
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr));
+    counter-reset: step;
+  }
+  .steps li {
+    counter-increment: step;
+    display: grid;
+    gap: 0.4rem;
+    padding: var(--space-m);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--graphite);
+  }
+  .steps li::before {
+    content: counter(step, decimal-leading-zero);
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--mint);
+  }
+  .steps h3 {
+    font-size: 1.1rem;
+  }
+
+  .laptop-art {
+    inline-size: 100%;
+    max-inline-size: 34rem;
+    margin-inline: auto;
+    filter: drop-shadow(0 24px 40px rgb(0 0 0 / 0.5));
+  }
+  .brand-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+}
+
+/* ==========================================================
+   ADDITIONS 2 — paste at the very BOTTOM of css/style.css
+   FAQ accordion used on the Contact page
+   ========================================================== */
+@layer components {
+  .faq {
+    display: grid;
+    gap: 0.75rem;
+    max-inline-size: 48rem;
+  }
+  .faq details {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--graphite);
+    overflow: hidden;
+  }
+  .faq summary {
+    padding: 1rem 1.25rem;
+    cursor: pointer;
+    font-family: var(--font-head);
+    font-weight: 600;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  .faq summary::-webkit-details-marker {
+    display: none;
+  }
+  .faq summary::after {
+    content: "+";
+    color: var(--mint);
+    font-size: 1.25rem;
+    line-height: 1;
+  }
+  .faq details[open] summary::after {
+    content: "–";
+  }
+  .faq details p {
+    padding: 0 1.25rem 1.25rem;
+  }
+}
+
+/* ==========================================================
+   OPTIONAL VISUAL PASS — paste at the very BOTTOM of css/style.css
+   CSS only: no HTML changes needed. To undo, delete this block.
+   Adds: gradient headline text, glowing grid background on the hero
+   and page banners, card top-line, dotted alternate sections,
+   and wireframe previews inside empty project boxes.
+   ========================================================== */
+@layer components {
+
+  /* Gradient text on highlighted words */
+  .accent {
+    background: linear-gradient(90deg, var(--emerald), var(--mint));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
+  /* Small line before section labels */
+  .section-head .eyebrow::before {
+    content: "";
+    display: inline-block;
+    inline-size: 2rem;
+    block-size: 1px;
+    margin-inline-end: 0.75rem;
+    vertical-align: middle;
+    background: var(--mint);
+  }
+
+  /* Grid-line background on hero and page banners */
+  .hero,
+  .page-hero {
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before,
+  .page-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image:
+      linear-gradient(var(--border) 1px, transparent 1px),
+      linear-gradient(90deg, var(--border) 1px, transparent 1px);
+    background-size: 3.5rem 3.5rem;
+    -webkit-mask-image: radial-gradient(70% 70% at 70% 25%, #000, transparent 78%);
+    mask-image: radial-gradient(70% 70% at 70% 25%, #000, transparent 78%);
+  }
+  .hero > *,
+  .page-hero > * {
+    position: relative;
+  }
+
+  /* Card top-line */
+  .card {
+    overflow: hidden;
+  }
+  .card::before {
+    content: "";
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline: 0;
+    block-size: 2px;
+    background: linear-gradient(90deg, var(--emerald), var(--mint), transparent);
+    opacity: 0.5;
+    transition: opacity 0.25s;
+  }
+  .card:hover::before {
+    opacity: 1;
+  }
+
+  /* Dotted pattern on alternate sections */
+  .section--alt {
+    background-image: radial-gradient(color-mix(in srgb, var(--mint) 14%, transparent) 1px, transparent 1px);
+    background-size: 1.6rem 1.6rem;
+  }
+
+  /* Wireframe previews in project boxes (hidden automatically once you add an <img>) */
+  .project__media {
+    position: relative;
+  }
+  .project__media::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto 0;
+    block-size: 1.7rem;
+    background:
+      radial-gradient(circle at 0.9rem 50%, #ff6b6b 0 0.2rem, transparent 0.23rem),
+      radial-gradient(circle at 1.6rem 50%, #ffd166 0 0.2rem, transparent 0.23rem),
+      radial-gradient(circle at 2.3rem 50%, var(--mint) 0 0.2rem, transparent 0.23rem),
+      rgb(0 0 0 / 0.35);
+  }
+  .project__media::after {
+    content: "";
+    position: absolute;
+    inset: 2.6rem 1.1rem 1.1rem;
+    background:
+      linear-gradient(var(--mint) 0 0) 0 0 / 50% 0.7rem no-repeat,
+      linear-gradient(var(--text-muted) 0 0) 0 1.3rem / 75% 0.4rem no-repeat,
+      linear-gradient(var(--text-muted) 0 0) 0 2rem / 60% 0.4rem no-repeat,
+      linear-gradient(var(--emerald) 0 0) 0 3rem / 5rem 1.3rem no-repeat,
+      linear-gradient(var(--forest) 0 0) 0 100% / 31% 3.2rem no-repeat,
+      linear-gradient(var(--forest) 0 0) 50% 100% / 31% 3.2rem no-repeat,
+      linear-gradient(var(--forest) 0 0) 100% 100% / 31% 3.2rem no-repeat;
+    opacity: 0.85;
+  }
+  .project__media:has(img)::before,
+  .project__media:has(img)::after {
+    display: none;
+  }
+}

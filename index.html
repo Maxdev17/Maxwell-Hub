@@ -12,15 +12,43 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 
   <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <!-- Share previews (WhatsApp, Facebook, X). Replace YOUR-DOMAIN with your real domain. -->
+  <meta name="theme-color" content="#071d16">
+  <link rel="canonical" href="https://maxwellhub.netlify.app/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Maxwell Hub">
+  <meta property="og:title" content="Maxwell Hub — Technology. Knowledge. Opportunity.">
+  <meta property="og:description" content="Maxwell Hub: websites, data analytics, practical training and digital products.">
+  <meta property="og:url" content="https://maxwellhub.netlify.app/">
+  <meta property="og:image" content="https://maxwellhub.netlify.app/images/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+  <!-- Logo sprite: defined once per page, reused with <use href="#mh-logo"> -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <linearGradient id="mh-g" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#18a66a"/>
+        <stop offset="1" stop-color="#75e0ae"/>
+      </linearGradient>
+      <symbol id="mh-logo" viewBox="0 0 48 48">
+        <path d="M24 3 42 13.5v21L24 45 6 34.5v-21Z" fill="#071d16" stroke="url(#mh-g)" stroke-width="2.4" stroke-linejoin="round"/>
+        <path d="M15 33V16l9 10 9-10v17" fill="none" stroke="url(#mh-g)" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="15" cy="16" r="2.4" fill="#75e0ae"/>
+        <circle cx="33" cy="16" r="2.4" fill="#75e0ae"/>
+        <circle cx="24" cy="26" r="2.4" fill="#f5f8f6"/>
+      </symbol>
+    </defs>
+  </svg>
 
   <!-- ================= HEADER (copy to every page) ================= -->
   <header class="site-header">
     <div class="header-inner">
       <a class="site-logo" href="index.html" aria-label="Maxwell Hub home">
-        <span class="logo-mark" aria-hidden="true">M</span>
+        <svg class="logo-svg" viewBox="0 0 48 48" aria-hidden="true"><use href="#mh-logo"/></svg>
         <span>MAXWELL <em>HUB</em></span>
       </a>
 
@@ -34,9 +62,9 @@
         <ul id="site-menu" class="site-menu" popover="auto">
           <!-- On each page, move aria-current="page" to that page's own link -->
           <li><a href="index.html" aria-current="page">Home</a></li>
-          <li><a href="about.html">About</a></li>
+          <li><a href="portfolio.html#about">About</a></li>
           <li><a href="index.html#divisions">Divisions</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="portfolio.html#work">Portfolio</a></li>
           <li><a href="marketplace.html">Marketplace</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
@@ -81,7 +109,6 @@
       <div class="container">
         <ul class="stats hero-stats">
           <li><div class="stat__num">5</div><div class="stat__label">Divisions</div></li>
-          <li><div class="stat__num">100%</div><div class="stat__label">Hand-coded</div></li>
           <li><div class="stat__num">2026</div><div class="stat__label">Established</div></li>
         </ul>
       </div>
@@ -290,7 +317,7 @@
 
         <div>
           <a class="site-logo" href="index.html" aria-label="Maxwell Hub home">
-            <span class="logo-mark" aria-hidden="true">M</span>
+            <svg class="logo-svg" viewBox="0 0 48 48" aria-hidden="true"><use href="#mh-logo"/></svg>
             <span>MAXWELL <em>HUB</em></span>
           </a>
           <p style="margin-block-start: .75rem;">Technology. Knowledge. Opportunity. Building skills, creating solutions, unlocking opportunities.</p>
@@ -316,8 +343,8 @@
           <h4>Company</h4>
           <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="portfolio.html#about">About</a></li>
+            <li><a href="portfolio.html#work">Portfolio</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
@@ -330,6 +357,7 @@
       </div>
     </div>
   </footer>
+    <script src="js/main.js" defer></script>
 
 </body>
 </html>

@@ -1,0 +1,15 @@
+FOLDER STRUCTURE (everything lowercase, exactly like this):
+
+maxwell-hub/
+  index.html  portfolio.html  tech.html  analytics.html  finance.html
+  marketplace.html  contact.html  academy.html  404.html
+  sitemap.xml  robots.txt
+  css/style.css
+  js/main.js
+  images/logo.svg  images/og-image.png   (later: maxwell.jpg + screenshots)
+
+BEFORE YOU DEPLOY:
+1. Find-and-replace  YOUR-DOMAIN  with your real address (no https://),
+   in every .html file, sitemap.xml and robots.txt.
+   Example: maxwellhub.netlify.app
+2. Check that your Instagram, email and WhatsApp links are correct.

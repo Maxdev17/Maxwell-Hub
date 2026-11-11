@@ -1059,3 +1059,26 @@
     display: none;
   }
 }
+
+/* ==========================================================
+   MOBILE HEADER FIX — paste at the very BOTTOM of css/style.css
+   On narrow phones the logo + Menu + "Get Started" were wider than
+   the screen, pushing the button off the edge. This hides the
+   header "Get Started" button on small screens (Contact is in the
+   menu) and lets the logo text shrink on very small phones.
+   ========================================================== */
+@layer components {
+  @media (max-width: 40rem) {
+    .header-inner > .btn {
+      display: none;
+    }
+    .site-logo {
+      font-size: 0.95rem;
+      letter-spacing: 0.05em;
+    }
+    .logo-svg {
+      inline-size: 2rem;
+      block-size: 2rem;
+    }
+  }
+}

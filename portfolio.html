@@ -20,13 +20,13 @@
     <link rel="icon" href="images/logo.svg" type="image/svg+xml" />
   <!-- Share previews (WhatsApp, Facebook, X). Replace YOUR-DOMAIN with your real domain. -->
   <meta name="theme-color" content="#071d16">
-  <link rel="canonical" href="https://maxwellhub.netlify.app/portfolio.html">
+  <link rel="canonical" href="https://YOUR-DOMAIN/portfolio.html">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Maxwell Hub">
   <meta property="og:title" content="Portfolio — Maxwell Hub">
   <meta property="og:description" content="Maxwell Hub portfolio: client projects and websites built for fun.">
-  <meta property="og:url" content="https://maxwellhub.netlify.app/portfolio.html">
-  <meta property="og:image" content="https://maxwellhub.netlify.app/images/og-image.png">
+  <meta property="og:url" content="https://YOUR-DOMAIN/portfolio.html">
+  <meta property="og:image" content="https://YOUR-DOMAIN/images/og-image.png">
   <meta name="twitter:card" content="summary_large_image">
 
     <link rel="stylesheet" href="css/style.css" />
@@ -91,11 +91,11 @@
           <span class="eyebrow">About &amp; Portfolio</span>
           <h1>
             Hi, I'm Maxwell.<br /><span class="accent"
-              >I build your digital presence.</span
+              >I build for the web.</span
             >
           </h1>
           <p>
-            Frontend web developer. Diligent worker, hand-coded, always learning.
+            Frontend web developer. Self-taught, hand-coded, always learning.
             Read the story, then open the work.
           </p>
         </div>
@@ -106,9 +106,9 @@
         <div class="container">
           <div class="about-grid">
             <div class="about-photo reveal">
-              <!-- TODO: add your photo at Images/maxwell.jpg, then uncomment the next line -->
-              <!-- <img src="Images/maxwell.jpg" alt="Maxwell, founder of Maxwell Hub"> -->
-              <span>Your photo here<br />Images/maxwell.jpg</span>
+              <!-- Drop your photo at images/maxwell.jpg. Until then, the logo shows. -->
+              <svg viewBox="0 0 48 48" aria-hidden="true" style="inline-size: 45%; block-size: auto; filter: drop-shadow(0 0 24px var(--glow));"><use href="#mh-logo"/></svg>
+              <img src="images/maxwell.jpg" alt="Maxwell, founder of Maxwell Hub" width="800" height="1000" onerror="this.remove()">
             </div>
 
             <div class="about-text reveal">
@@ -118,7 +118,7 @@
                 A well of knowledge, <span class="accent">put to work.</span>
               </h2>
               <p>
-                I'm Maxwell, a passionate frontend web developer based in
+                I'm Maxwell, a self-taught frontend web developer based in
                 Nigeria. I build fast, mobile-friendly websites by hand, in
                 plain HTML, CSS and JavaScript, for businesses that want to look
                 credible online.
@@ -180,9 +180,10 @@
           <div class="grid">
             <article class="card reveal">
               <span class="card__icon" aria-hidden="true">⌨️</span>
-              <h3>Custom Code</h3>
+              <h3>Hand-coded</h3>
               <p>
-                You decide what you want, and I build it from scratch. The site is lightweight and fully yours.
+                No drag-and-drop builders. Every line is written by hand, so the
+                site is lightweight and fully yours.
               </p>
             </article>
             <article class="card reveal">
@@ -251,11 +252,9 @@
 
           <div class="grid" id="project-grid">
             <article class="project reveal" data-category="client">
-              <div
-                class="project__media"
-                role="img"
-                aria-label="OlyLife website preview"
-              ></div>
+              <div class="project__media">
+              <img src="images/olylife.jpg" alt="OlyLife website homepage" width="1200" height="750" loading="lazy" onerror="this.remove()">
+            </div>
               <div class="project__body">
                 <span class="project__tag">Client project</span>
                 <h3>OlyLife / IMGconcepts</h3>
@@ -274,11 +273,9 @@
               </div>
             </article>
             <article class="project reveal" data-category="client">
-              <div
-                class="project__media"
-                role="img"
-                aria-label="OlyLife version 2 website preview"
-              ></div>
+              <div class="project__media">
+              <img src="images/olylife-v2.jpg" alt="OlyLife version 2 website homepage" width="1200" height="750" loading="lazy" onerror="this.remove()">
+            </div>
               <div class="project__body">
                 <span class="project__tag">Client project</span>
                 <h3>OlyLife / IMGconcepts — Version 2</h3>
@@ -287,15 +284,13 @@
                   delivered to the same client.
                 </p>
                 <!-- TODO: replace # with the live site link -->
-                <a class="card__link" href="https://olylife-imgpage.netlify.app/">View live site →</a>
+                <a class="card__link" href="#">View live site →</a>
               </div>
             </article>
             <article class="project reveal" data-category="fun">
-              <div
-                class="project__media"
-                role="img"
-                aria-label="Gilmor Construction website preview"
-              ></div>
+              <div class="project__media">
+              <img src="images/gilmor.jpg" alt="Gilmor Construction website homepage" width="1200" height="750" loading="lazy" onerror="this.remove()">
+            </div>
               <div class="project__body">
                 <span class="project__tag">Built for fun</span>
                 <h3>Gilmor Construction</h3>
@@ -313,39 +308,33 @@
               </div>
             </article>
             <article class="project reveal" data-category="fun">
-              <div
-                class="project__media"
-                role="img"
-                aria-label="Classique Event Place website preview"
-              ></div>
+              <div class="project__media">
+              <img src="images/classique.jpg" alt="Classique Event Place website homepage" width="1200" height="750" loading="lazy" onerror="this.remove()">
+            </div>
               <div class="project__body">
                 <span class="project__tag">Built for fun</span>
                 <h3>Classique Event Place</h3>
                 <p>A 4-page website for an event venue in Ikeja, Lagos.</p>
                 <!-- TODO: replace # with the live site link -->
-                <a class="card__link" href="https://classiqueeventplace.netlify.app">View live site →</a>
+                <a class="card__link" href="#">View live site →</a>
               </div>
             </article>
             <article class="project reveal" data-category="fun">
-              <div
-                class="project__media"
-                role="img"
-                aria-label="Cynard Eye Clinic website preview"
-              ></div>
+              <div class="project__media">
+              <img src="images/cynard.jpg" alt="Cynard Eye Clinic website homepage" width="1200" height="750" loading="lazy" onerror="this.remove()">
+            </div>
               <div class="project__body">
                 <span class="project__tag">Built for fun</span>
                 <h3>Cynard Eye Clinic</h3>
                 <p>A clean, trust-first website concept for an eye clinic.</p>
                 <!-- TODO: replace # with the live site link -->
-                <a class="card__link" href="https://eyecare-pro.netlify.app/">View live site →</a>
+                <a class="card__link" href="#">View live site →</a>
               </div>
             </article>
             <article class="project reveal" data-category="fun">
-              <div
-                class="project__media"
-                role="img"
-                aria-label="Poiz Imaging website preview"
-              ></div>
+              <div class="project__media">
+              <img src="images/poiz.jpg" alt="Poiz Imaging website homepage" width="1200" height="750" loading="lazy" onerror="this.remove()">
+            </div>
               <div class="project__body">
                 <span class="project__tag">Built for fun</span>
                 <h3>Poiz Imaging</h3>
@@ -354,15 +343,13 @@
                   business.
                 </p>
                 <!-- TODO: replace # with the live site link -->
-                <a class="card__link" href="https://poiz-studio.netlify.app/">View live site →</a>
+                <a class="card__link" href="#">View live site →</a>
               </div>
             </article>
             <article class="project reveal" data-category="fun">
-              <div
-                class="project__media"
-                role="img"
-                aria-label="The Jollof Man website preview"
-              ></div>
+              <div class="project__media">
+              <img src="images/jollof-man.jpg" alt="The Jollof Man website homepage" width="1200" height="750" loading="lazy" onerror="this.remove()">
+            </div>
               <div class="project__body">
                 <span class="project__tag">Built for fun</span>
                 <h3>The Jollof Man</h3>
@@ -371,7 +358,7 @@
                   London.
                 </p>
                 <!-- TODO: replace # with the live site link -->
-                <a class="card__link" href="https://thejolloffoodie.netlify.app/">View live site →</a>
+                <a class="card__link" href="#">View live site →</a>
               </div>
             </article>
           </div>
